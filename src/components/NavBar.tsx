@@ -40,7 +40,7 @@ function NavBar() {
               <li>
                 <Link
                   href="mailto:info@corebicle.com"
-                  className=" border hover:text-black  hover:bg-white text-white font-medium  bg-black rounded-lg py-3 p-4"
+                  className=" hover:border hover:text-black  hover:bg-white text-white font-medium  bg-black rounded-lg py-3 p-4"
                 >
                   Contact Us
                 </Link>
