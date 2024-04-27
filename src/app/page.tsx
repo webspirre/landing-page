@@ -1,6 +1,7 @@
 import Image from "next/image";
 import NavBar from "@/components/NavBar";
 import Link from "next/link";
+import { HeroSection } from "@/components";
 
 export default function Home() {
   const backgroundImageUrl =
@@ -11,53 +12,14 @@ export default function Home() {
       <NavBar />
 
       {/* Hero Section */}
-      <section>
-        <div
-          style={{
-            backgroundImage: `url(${backgroundImageUrl})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            position: "relative", // Position relative to allow absolute positioning of child elements
-          }}
-          className=" justify-center flex-row mt-[100px] h-screen"
-        >
-          <h1 className="text-[60px]">
-            Finding web design inspiration doesn’t have to be Hard.
-          </h1>
-          <h1 className="text-[24px] w-[600px] pt-4 text-center">
-            Skip the stressful part. Get real and practical web design
-            inspiration from the internet’s best designed and highest-converting
-            websites.
-          </h1>
-          <div className="flex items-center justify-center gap-4 pt-6">
-            <Link
-              href="/"
-              className="bg-black py-4 px-8 text-white rounded-[20px] border border-[#BBBBBB] font-medium text-[18px]"
-            >
-              Get started now
-            </Link>
-            <Link
-              href="/"
-              className="bg-white p-4 px-8 text-black rounded-[20px] border border-[#BBBBBB] font-medium text-[18px]"
-            >
-              Learn More
-            </Link>
-          </div>
-          <Image
-            height={20}
-            width={1030}
-            src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714127396/utilities/Group_40_fkagjj.svg"
-            alt="rice"
-            className=""
-          />
-        </div>
-        <div></div>
-      </section>
+
+      <HeroSection bgImg={backgroundImageUrl} />
+      <HeroSection bgImg={backgroundImageUrl} />
 
       {/* Section 2 */}
-      <section className="h-[779px]">
+      <section className="h-auto">
         <div className="grid grid-cols-8 gap-4">
-          <div className="col-span-4  flex-row">
+          <div className="col-span-4 flex-row">
             <h1 className="text-[32px]">
               Webspirre has everything you need to ignite your creative fire.
             </h1>
