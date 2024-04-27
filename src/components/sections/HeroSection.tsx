@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 // import { GiPlayButton } from "react-icons/gi";
 
@@ -7,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { SectionType } from "@/types/types";
 import AOS from "aos";
-
 
 import { Carter_One } from "next/font/google";
 
@@ -45,7 +42,8 @@ const HeroSection: React.FC<SectionType> = ({ bgImg }) => {
               <h1
                 className={`${carterOne.className} text-5xl text-center font-black leading-tight`}
               >
-                Finding web design inspiration doesn’t have to be <span
+                Finding web design inspiration doesn’t have to be{" "}
+                <span
                   style={{
                     backgroundImage: `url(${backgroundImageUrl1})`,
                     backgroundSize: "contain",
@@ -59,9 +57,6 @@ const HeroSection: React.FC<SectionType> = ({ bgImg }) => {
                 </span>
               </h1>
               <h1 className="text-2xl font-medium text-center pt-4">
-                {/* Skip the stressful part. Get real and practical web design
-                inspiration from the internet’s best designed and
-                highest-converting websites. */}
                 We are building the ultimate web design inspiration platform.
                 Join the waitlist, and be the first person to know when we
                 launch.

@@ -3,12 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev & npx next-video sync -w",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.19",
     "@radix-ui/themes": "^3.0.2",
     "@supabase/supabase-js": "^2.42.7",
     "@types/node": "20.12.7",
@@ -17,6 +18,7 @@
     "aos": "^3.0.0-beta.6",
     "autoprefixer": "10.4.19",
     "next": "14.2.3",
+    "next-video": "^1.0.4",
     "postcss": "8.4.38",
     "react": "18.3.0",
     "react-dom": "18.3.0",

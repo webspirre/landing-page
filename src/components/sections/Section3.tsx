@@ -1,5 +1,6 @@
-import Link from 'next/link';
-import React from 'react'
+import Link from "next/link";
+import React from "react";
+import AOS from "aos";
 
 import { Carter_One } from "next/font/google";
 
@@ -10,18 +11,26 @@ const carterOne = Carter_One({
 });
 
 function Section3() {
-    const backgroundImageUrl =
-      "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714214040/utilities/Rectangle_3_ydmuae.png";
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  });
+  const backgroundImageUrl =
+    "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714214040/utilities/Rectangle_3_ydmuae.png";
 
-    const backgroundImageUrl1 =
-      "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714216695/utilities/Vector_10_eafast.svg";
+  const backgroundImageUrl1 =
+    "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714216695/utilities/Vector_10_eafast.svg";
 
   return (
     <div className="">
       <section className="relative h-[598px]">
         <div className="relative h-full items-center bg-black grid grid-cols-8 gap-4 pl-[200px]">
-          <div className="col-span-5 pr-[200px] relative z-10">
-            <h1 className={`${carterOne.className} text-[32px] text-white`}>
+          <div
+            className="col-span-5 pr-[200px] relative z-10"
+            data-aos="fade-up-left"
+          >
+            <h1 className={`${carterOne.className}  text-[30px] text-white`}>
               A vast collection of some of the <br /> internet’s best{" "}
               <span
                 style={{
@@ -36,7 +45,7 @@ function Section3() {
                 designed websites.
               </span>
             </h1>
-            <p className="text-[20px] text-white my-[32px] ">
+            <p className="text-sm xl:text-lg text-white my-[32px] ">
               Tired of endlessly trawling through different websites searching
               for that perfect spark of inspiration for the project at hand? We
               get it. That's why we're building Webspirre.
@@ -50,6 +59,7 @@ function Section3() {
             </Link>
           </div>
           <div
+            data-aos="fade-up-right"
             style={{
               backgroundImage: `url(${backgroundImageUrl})`,
               backgroundSize: "cover",
@@ -69,4 +79,4 @@ function Section3() {
   );
 }
 
-export default Section3
+export default Section3;

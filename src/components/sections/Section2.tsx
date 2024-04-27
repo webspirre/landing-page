@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Carter_One } from "next/font/google";
+import AOS from "aos";
 
 const carterOne = Carter_One({
   weight: "400",
@@ -10,15 +11,20 @@ const carterOne = Carter_One({
 });
 
 function Section2() {
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  });
   const backgroundImageUrl =
     "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714211870/utilities/Vector_8_kgqjio.svg";
 
   return (
     <div>
-      <section className="h-[779px] mt-[170px] px-[200px]">
+      <section className="h-[779px] mt-[1d70px] px-40 xl:px-[200px]">
         <div className="grid grid-cols-8 gap-4 items-center ">
-          <div className="col-span-4 flex-row">
-            <h1 className={` ${carterOne.className} text-[32px] `}>
+          <div className="col-span-4 flex-row" data-aos="fade-left">
+            <h1 className={` ${carterOne.className}  text-[30px]`}>
               Webspirre has everything you <br /> need to ignite your{" "}
               <span
                 style={{
@@ -34,7 +40,7 @@ function Section2() {
                 creative fire.{" "}
               </span>
             </h1>
-            <p className="text-[20px] my-[32px]">
+            <p className="text-sm xl:text-lg my-[32px]">
               Tired of endlessly trawling through different websites searching
               for that perfect spark of inspiration for the project at hand? We
               get it. That's why we're building Webspirre.
@@ -49,7 +55,10 @@ function Section2() {
               </Link>
             </div>
           </div>
-          <div className="col-span-4 justify-center items-center flex">
+          <div
+            className="col-span-4 justify-center items-center flex"
+            data-aos="fade-right"
+          >
             {" "}
             <Image
               height={20}
