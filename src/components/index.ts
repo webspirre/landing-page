@@ -1,5 +1,6 @@
 // exports for section components
 export { default as HeroSection } from "./sections/HeroSection";
+export { default as ContactSection } from "./sections/contactsection/ContactSection";
 
 // exports for modal components
 export { default as VideoModal } from "./modals/VideoModal";

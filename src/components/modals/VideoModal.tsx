@@ -18,7 +18,7 @@ const VideoModal: React.FC<ModalType> = ({ open, toogleModal }) => {
       </div>
 
       <Transition appear show={open} as={Fragment}>
-        <Dialog as="div" className="fixed inset-0 z-50" onClose={toogleModal}>
+        <Dialog as="div" className="relative z-10" onClose={toogleModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -28,10 +28,11 @@ const VideoModal: React.FC<ModalType> = ({ open, toogleModal }) => {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Dialog.Panel
-              className="fixed inset-0 overflow-y-auto flex items-center justify-center"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
-            >
+            <div className="fixed inset-0 bg-black/75" />
+          </Transition.Child>
+
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center p-4 text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-300"
@@ -41,7 +42,7 @@ const VideoModal: React.FC<ModalType> = ({ open, toogleModal }) => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <div className="w-full max-w-full md:max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-full md:max-w-4xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                   <div className="flex justify-between items-center p-3 border-b mb-5 w-full">
                     <Dialog.Title
                       as="h3"
@@ -55,10 +56,10 @@ const VideoModal: React.FC<ModalType> = ({ open, toogleModal }) => {
                     />
                   </div>
                   <VideoPlayer />
-                </div>
+                </Dialog.Panel>
               </Transition.Child>
-            </Dialog.Panel>
-          </Transition.Child>
+            </div>
+          </div>
         </Dialog>
       </Transition>
     </>

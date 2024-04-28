@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 function Section5() {
-     const backgroundImageUrl =
-       "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1705724835/utilities/background_illustration_lcdskr.svg";
+  const backgroundImageUrl =
+    "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1705724835/utilities/background_illustration_lcdskr.svg";
 
   return (
     <div>
@@ -17,7 +17,7 @@ function Section5() {
           }}
           className="grid grid-cols-8 gap-4"
         >
-          {" "}
+          ``{" "}
           <div className="col-span-4 ">
             <h1 className="text-[32px]">
               Webspirre has everything you need to ignite your creative fire.
@@ -42,4 +42,4 @@ function Section5() {
   );
 }
 
-export default Section5
+export default Section5;
