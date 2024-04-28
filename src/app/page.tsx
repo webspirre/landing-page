@@ -19,7 +19,7 @@ import Fallback from "@/components/ErrorBoundary";
 
 export default function Home() {
   const [vModal, setVModal] = React.useState(false);
-  const [isForm, setIsForm] = React.useState(true);
+  const [isForm, setIsForm] = React.useState(false);
   const handleVideoToggle = () => {
     setVModal((prev) => {
       const newState = !prev;
@@ -41,12 +41,12 @@ export default function Home() {
 
           {/* Hero Section */}
           <HeroSection bgImg={backgroundImageUrl} />
-          {/* <VideoModal open={vModal} toogleModal={handleVideoToggle} />
+          <VideoModal open={vModal} toogleModal={handleVideoToggle} />
           <FormSuccessModal
             open={isForm}
             toogleModal={handleFormToggle}
             videoToggle={handleVideoToggle}
-          /> */}
+          />
 
           {/* Section 2 */}
           <Section2 />
@@ -61,7 +61,11 @@ export default function Home() {
           <Section5 />
 
           {/* Contact Section */}
-          <ContactSection />
+          <ContactSection
+            toogleModal={handleFormToggle}
+            open={isForm}
+            videoToggle={handleVideoToggle}
+          />
 
           <Footer />
         </main>

@@ -7,7 +7,7 @@ import { ImCancelCircle } from "react-icons/im";
 const VideoModal: React.FC<ModalType> = ({ open, toogleModal }) => {
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center">
+      {/* <div className="fixed inset-0 flex items-center justify-center">
         <button
           type="button"
           onClick={toogleModal}
@@ -15,7 +15,7 @@ const VideoModal: React.FC<ModalType> = ({ open, toogleModal }) => {
         >
           Open dialog
         </button>
-      </div>
+      </div> */}
 
       <Transition appear show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={toogleModal}>

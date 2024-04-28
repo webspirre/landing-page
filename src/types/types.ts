@@ -5,8 +5,9 @@ interface SectionType {
 }
 
 interface ModalType {
-  open: boolean;
+  open?: boolean;
   toogleModal(): void;
+  videoToggle?: () => void;
 }
 
 export type { SectionType, ModalType };

@@ -12,17 +12,21 @@ const carterOne = Carter_One({
 });
 
 interface MyModalProps extends ModalType {
-  videoToggle(): void;
+  videoToggle?: () => void;
+  name?: string;
+  resetForm?: () => void;
 }
 
 const FormSuccessModal: React.FC<MyModalProps> = ({
   open,
   toogleModal,
   videoToggle,
+  resetForm,
+  name,
 }) => {
   return (
     <>
-      <div className="fixed inset-0 flex items-center justify-center">
+      {/* <div className="fixed inset-0 flex items-center justify-center">
         <button
           type="button"
           onClick={toogleModal}
@@ -30,7 +34,7 @@ const FormSuccessModal: React.FC<MyModalProps> = ({
         >
           Open dialog
         </button>
-      </div>
+      </div> */}
 
       <Transition appear show={open} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={toogleModal}>
@@ -67,9 +71,12 @@ const FormSuccessModal: React.FC<MyModalProps> = ({
                         Hurray
                       </Dialog.Title>
                       <h1 className="text-xl font-medium pt-10">
-                        Thank you <span className="font-black">John</span>, you
-                        have successfully joined the Webspirre Waitlist and you
-                        will be notified immediately when we go live.
+                        Thank you{" "}
+                        <span className="font-black">
+                          {name ? name : "User"}
+                        </span>
+                        , you have successfully joined the Webspirre Waitlist
+                        and you will be notified immediately when we go live.
                       </h1>
                       <button
                         onClick={toogleModal}
@@ -89,6 +96,7 @@ const FormSuccessModal: React.FC<MyModalProps> = ({
                       <div className="mt-8 w-full p-0 border-transparent bg-[#D9D9D9] h-80 flex items-center justify-center rounded-lg">
                         <div
                           className="p-5 flex item-center justify-center shadow-sm bg-white rounded-xl cursor-pointer"
+                          // onClick={() => videoToggle && resetForm}
                           onClick={videoToggle}
                         >
                           <FaPlay size={20} />

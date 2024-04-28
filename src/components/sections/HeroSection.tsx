@@ -32,7 +32,7 @@ const HeroSection: React.FC<SectionType> = ({ bgImg }) => {
             backgroundPosition: "center",
             position: "relative", // Position relative to allow absolute positioning of child elements
           }}
-          className=" justify-center w-full flex-row mt-[100px] h-screen items-center space-y-4 py-20"
+          className="justify-center w-full flex-row mt-[100px] h-screen items-center space-y-4 py-20"
         >
           <article className="flex-flex-col w-full max-w-full space-y-6">
             <div
