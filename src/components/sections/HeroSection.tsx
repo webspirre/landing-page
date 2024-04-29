@@ -3,7 +3,7 @@ import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import { ModalType, SectionType } from "@/types/types";
+import { ModalType, SectionType } from "../../types/types";
 import AOS from "aos";
 import { GiPlayButton } from "react-icons/gi";
 

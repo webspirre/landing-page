@@ -1,19 +1,19 @@
 "use client";
 
-import NavBar from "@/components/NavBar";
+import NavBar from "../components/NavBar";
 import {
   ContactSection,
   FormSuccessModal,
   HeroSection,
   VideoModal,
-} from "@/components";
+} from "../components";
 import { ErrorBoundary } from "react-error-boundary";
 
-import Section4 from "@/components/sections/Section4";
-import Section5 from "@/components/sections/Section5";
-import Section3 from "@/components/sections/Section3";
-import Section2 from "@/components/sections/Section2";
-import Footer from "@/components/Footer";
+import Section4 from "../components/sections/Section4";
+import Section5 from "../components/sections/Section5";
+import Section3 from "../components/sections/Section3";
+import Section2 from "../components/sections/Section2";
+import Footer from "../components/Footer";
 import React from "react";
 import Fallback from "@/components/ErrorBoundary";
 import ScrollToTop from "react-scroll-to-top";
@@ -59,11 +59,15 @@ export default function Home() {
           {/* section 3  */}
           <Section3 />
 
-          {/* section 4 */}
-          <Section4 />
-
-          {/* section 5 */}
-          <Section5 />
+      {/* section 4 */}
+      <Section4 />
+      
+      {/* section 5 */}
+      <Section5 />
+      
+      
+     
+      
 
           {/* Contact Section */}
           <ContactSection

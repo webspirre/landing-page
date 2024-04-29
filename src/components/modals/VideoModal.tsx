@@ -1,8 +1,9 @@
-import { ModalType } from "@/types/types";
+import { ModalType } from "../../types/types";
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import React, { Fragment, useState } from "react";
 import { VideoPlayer } from "..";
-import { ImCancelCircle } from "react-icons/im";
+import { ImCancelCircle } from "react-icons";
+
 
 const VideoModal: React.FC<ModalType> = ({ open, toogleModal }) => {
   return (
