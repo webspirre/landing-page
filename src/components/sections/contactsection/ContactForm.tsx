@@ -228,7 +228,10 @@ const ContactForm: React.FC<ModalType> = ({
                     <ErrorMessage
                       name="lastName"
                       component="div"
-                      className={cx(carterOne.className, "error text-red-900")}
+                      className={cx(
+                        carterOne.className,
+                        "invisible error text-red-900 "
+                      )}
                     />
                   </div>
                   <div className={cx(carterOne.className)}>

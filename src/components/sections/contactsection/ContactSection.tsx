@@ -19,6 +19,8 @@ const ContactSection: React.FC<ModalType> = ({
   const bgImg =
     "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1705724835/utilities/background_illustration_lcdskr.svg";
 
+  // crypto.randomUUID
+
   return (
     <>
       <div

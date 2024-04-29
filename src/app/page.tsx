@@ -16,6 +16,7 @@ import Section2 from "@/components/sections/Section2";
 import Footer from "@/components/Footer";
 import React from "react";
 import Fallback from "@/components/ErrorBoundary";
+import ScrollToTop from "react-scroll-to-top";
 
 export default function Home() {
   const [vModal, setVModal] = React.useState(false);
@@ -74,6 +75,7 @@ export default function Home() {
           <Footer />
         </main>
       </ErrorBoundary>
+      <ScrollToTop smooth />
     </>
   );
 }
