@@ -3,8 +3,9 @@ import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import { SectionType } from "@/types/types";
+import { ModalType, SectionType } from "@/types/types";
 import AOS from "aos";
+import { GiPlayButton } from "react-icons/gi";
 
 import { Carter_One } from "next/font/google";
 
@@ -14,7 +15,9 @@ const carterOne = Carter_One({
   display: "swap",
 });
 
-const HeroSection: React.FC<SectionType> = ({ bgImg }) => {
+interface HeroSectionType extends ModalType, SectionType {}
+
+const HeroSection: React.FC<HeroSectionType> = ({ bgImg, videoToggle }) => {
   const backgroundImageUrl1 =
     "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714212739/utilities/Vector_9_uu9gsi.svg";
   React.useEffect(() => {
@@ -65,18 +68,18 @@ const HeroSection: React.FC<SectionType> = ({ bgImg }) => {
 
             <div className="flex items-center justify-center gap-4 pt-6">
               <Link
-                href="/"
+                href="#contact-section"
                 className="bg-black py-4 px-8 text-white rounded-[20px] border border-[#BBBBBB] font-medium text-[18px]"
               >
                 Join the waitlist
               </Link>
-              <Link
-                href="/"
-                className="bg-white p-4 px-8 text-black rounded-[20px] border border-[#BBBBBB] font-medium text-[18px] flex items-center space-x-3"
+              <div
+                className="bg-white p-4 px-8 text-black rounded-[20px] border border-[#BBBBBB] font-medium text-[18px] flex items-center space-x-3 cursor-pointer"
+                onClick={videoToggle}
               >
-                {/* <GiPlayButton size={20} /> */}
+                <GiPlayButton size={20} />
                 <span>See how it works</span>
-              </Link>
+              </div>
             </div>
             {/*@todo still working here */}
             <Image

@@ -40,7 +40,11 @@ export default function Home() {
           <NavBar />
 
           {/* Hero Section */}
-          <HeroSection bgImg={backgroundImageUrl} />
+          <HeroSection
+            bgImg={backgroundImageUrl}
+            videoToggle={handleVideoToggle}
+            toogleModal={() => {}}
+          />
           <VideoModal open={vModal} toogleModal={handleVideoToggle} />
           <FormSuccessModal
             open={isForm}

@@ -340,7 +340,17 @@ const ContactForm: React.FC<ModalType> = ({
               <div className="w-full text-center">
                 <button
                   type="submit"
-                  className="bg-black py-4 px-20 text-white rounded-[20px] border border-[#BBBBBB] font-medium text-[18px] "
+                  className="bg-black py-4 px-20 text-white rounded-[20px] border border-[#BBBBBB] font-medium text-[18px] disabled:bg-slate-600 disabled:cursor-not-allowed"
+                  disabled={
+                    ![
+                      values.country,
+                      values.email,
+                      values.industry,
+                      values.specialization,
+                      values.name,
+                      values.lastName,
+                    ].every(Boolean)
+                  }
                 >
                   Submit
                 </button>

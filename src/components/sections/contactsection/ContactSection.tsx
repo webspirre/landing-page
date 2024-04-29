@@ -22,13 +22,14 @@ const ContactSection: React.FC<ModalType> = ({
   return (
     <>
       <div
+        id="contact-section"
         style={{
           backgroundImage: `url(${bgImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           position: "relative", // Position relative to allow absolute positioning of child elements
         }}
-        className="justify-center w-full flex-row mt-[100px] h-screen items-center space-y-4 py-20"
+        className="justify-center w-full flex-row h-screen items-center space-y-4 py-20"
       >
         <section className="p-20 w-full">
           <div className="text-center mx-auto max-w-3xl">

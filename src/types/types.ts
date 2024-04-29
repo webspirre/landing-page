@@ -1,9 +1,16 @@
 import React from "react";
 
-interface SectionType {
-  bgImg?: string;
+enum SectionId {
+  HERO = "hero_section",
+  SECTWO = "section_two",
+  CONTACTSEC = "contact_section",
+  SECTHREE = "section_three",
 }
 
+interface SectionType {
+  bgImg?: string;
+  sectionId?: SectionId;
+}
 interface ModalType {
   open?: boolean;
   toogleModal(): void;
