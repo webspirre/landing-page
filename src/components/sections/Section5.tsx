@@ -1,5 +1,6 @@
 import Link from "next/link";
-import React from "react";;
+import React from "react";
+import AOS from "aos";
 
 import { Carter_One } from "next/font/google";
 
@@ -10,17 +11,25 @@ const carterOne = Carter_One({
 });
 
 function Section5() {
-    const backgroundImageUrl =
-      "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714387458/utilities/Rectangle_3_1_r19lpf.png";
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  });
+  const backgroundImageUrl =
+    "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714387458/utilities/Rectangle_3_1_r19lpf.png";
 
-    const backgroundImageUrl1 =
-      "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714387576/utilities/Vector_12_l9kvsk.svg";
+  const backgroundImageUrl1 =
+    "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714387576/utilities/Vector_12_l9kvsk.svg";
 
   return (
     <div className="">
       <section className="relative h-[598px]">
         <div className="relative h-full items-center bg-black grid grid-cols-8 gap-4 pl-[200px]">
-          <div className="col-span-5 pr-[200px] relative z-10">
+          <div
+            className="col-span-5 pr-[200px] relative z-10"
+            data-aos="fade-up-right"
+          >
             <h1 className={`${carterOne.className} text-[32px] text-white`}>
               Stay ahead of the
               <span
@@ -60,6 +69,7 @@ function Section5() {
           ></div>
         </div>
         <img
+          data-aos="fade-up-down"
           src="https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714214062/utilities/Frame_38_1_wzk5f9.svg"
           alt=""
           className="absolute bottom-0 z-0"

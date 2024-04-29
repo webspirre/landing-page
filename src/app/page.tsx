@@ -59,15 +59,11 @@ export default function Home() {
           {/* section 3  */}
           <Section3 />
 
-      {/* section 4 */}
-      <Section4 />
-      
-      {/* section 5 */}
-      <Section5 />
-      
-      
-     
-      
+          {/* section 4 */}
+          <Section4 />
+
+          {/* section 5 */}
+          <Section5 />
 
           {/* Contact Section */}
           <ContactSection
@@ -79,7 +75,7 @@ export default function Home() {
           <Footer />
         </main>
       </ErrorBoundary>
-      <ScrollToTop smooth />
+      <ScrollToTop smooth className="flex justify-center items-center " />
     </>
   );
 }
