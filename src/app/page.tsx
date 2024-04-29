@@ -64,10 +64,7 @@ export default function Home() {
       {/* section 5 */}
       <Section5 />
       
-      {/* form section
-      <FormSection /> */}
-
-      {/* footer */}
+      
      
       
 

@@ -1,9 +1,10 @@
-import { ModalType } from "@/types/types";
+import { ModalType } from "../../types/types";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { Carter_One } from "next/font/google";
 import { SiSparkar } from "react-icons/si";
 import { FaPlay } from "react-icons/fa";
+import React from "react";
 
 const carterOne = Carter_One({
   weight: "400",
