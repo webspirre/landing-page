@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";;
 
 import { Carter_One } from "next/font/google";
 
@@ -69,4 +69,4 @@ function Section5() {
   );
 }
 
-export default Section5
+export default Section5;
