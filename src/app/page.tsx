@@ -5,6 +5,7 @@ import Section5 from "@/components/sections/Section5";
 import Section3 from "@/components/sections/Section3";
 import Section2 from "@/components/sections/Section2";
 import Footer from "@/components/Footer";
+import FormSection from "@/components/sections/FormSection";
 
 export default function Home() {
   const backgroundImageUrl =
@@ -28,7 +29,11 @@ export default function Home() {
       
       {/* section 5 */}
       <Section5 />
+      
+      {/* form section */}
+      <FormSection />
 
+      {/* footer */}
       <Footer />
     </main>
   );
