@@ -7,6 +7,7 @@ import { Carter_One } from "next/font/google";
 import cx from "classnames";
 import { ModalType } from "@/types/types";
 import FormSuccessModal from "@/components/modals/FormSuccessModal";
+import AOS from "aos";
 import {
   countryOptions_,
   industryOptions_,
@@ -49,6 +50,11 @@ const ContactForm: React.FC<ModalType> = ({
   open,
   videoToggle,
 }) => {
+  React.useEffect(() => {
+    AOS.init({
+      duration: 1500,
+    });
+  });
   const initialValues: FormData = {
     name: "",
     email: "",
@@ -120,7 +126,10 @@ const ContactForm: React.FC<ModalType> = ({
               videoToggle={videoToggle}
             />
             {/* Form Content */}
-            <Form className="p-20 shadow-xl rounded-xl space-y-20 w-full">
+            <Form
+              className="p-20 shadow-xl rounded-xl space-y-20 w-full bg-white"
+              data-aos="fade-up"
+            >
               <div className="flex flex-col md:flex-row space-y-3 md:space-x-4 w-full justify-center">
                 <div className="flex-1 flex-col space-y-4 pt-4">
                   <div className={cx(carterOne.className, "flex flex-col")}>

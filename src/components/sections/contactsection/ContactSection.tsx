@@ -17,7 +17,7 @@ const ContactSection: React.FC<ModalType> = ({
   const backgroundImageUrl1 =
     "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714212739/utilities/Vector_9_uu9gsi.svg";
   const bgImg =
-    "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1705724835/utilities/background_illustration_lcdskr.svg";
+    "https://res.cloudinary.com/dcb4ilgmr/image/upload/v1714388591/utilities/Component_11_l7n72h.svg";
 
   // crypto.randomUUID
 
@@ -31,7 +31,7 @@ const ContactSection: React.FC<ModalType> = ({
           backgroundPosition: "center",
           position: "relative", // Position relative to allow absolute positioning of child elements
         }}
-        className="justify-center w-full flex-row h-screen items-center space-y-4 py-20"
+        className="justify-center w-full flex-row h- items-center space-y-4 py-20"
       >
         <section className="p-20 w-full">
           <div className="text-center mx-auto max-w-3xl">

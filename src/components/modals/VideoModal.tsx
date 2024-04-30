@@ -4,7 +4,6 @@ import React, { Fragment, useState } from "react";
 import { VideoPlayer } from "..";
 import { ImCancelCircle } from "react-icons/im";
 
-
 const VideoModal: React.FC<ModalType> = ({ open, toogleModal }) => {
   return (
     <>
