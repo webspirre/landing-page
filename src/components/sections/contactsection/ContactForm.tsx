@@ -40,7 +40,7 @@ interface FormData {
 }
 
 const carterOne = Carter_One({
-  weight: "400",
+  weight: ["400"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -127,10 +127,10 @@ const ContactForm: React.FC<ModalType> = ({
             />
             {/* Form Content */}
             <Form
-              className="p-20 shadow-xl rounded-xl space-y-20 w-full bg-white"
+              className="p-2 md:p-20 shadow-xl roundd-sm md:rounded-xl space-y-10 md:space-y-20 w-full bg-white"
               data-aos="fade-up"
             >
-              <div className="flex flex-col md:flex-row space-y-3 md:space-x-4 w-full justify-center">
+              <div className="flex flex-col md:flex-row space-y-3 md:space-x-4 w-full justify-center text-xs md:text-xl font-thin">
                 <div className="flex-1 flex-col space-y-4 pt-4">
                   <div className={cx(carterOne.className, "flex flex-col")}>
                     <label htmlFor="name">First Name:</label>
@@ -141,7 +141,7 @@ const ContactForm: React.FC<ModalType> = ({
                       placeholder="Enter your firstName"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-4 px-4 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500"
+                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500 placeholder:text-xs md:text-xl"
                       )}
                     />
 
@@ -161,7 +161,7 @@ const ContactForm: React.FC<ModalType> = ({
                       name="email"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-4 px-4 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500"
+                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs"
                       )}
                     />
                     <ErrorMessage
@@ -172,7 +172,7 @@ const ContactForm: React.FC<ModalType> = ({
                   </div>
                   {/*industry  */}
                   <div className={cx(carterOne.className)}>
-                    <label htmlFor="industry">Select an industry:</label>
+                    <label htmlFor="industry"> industry:</label>
                     <Field name="industry">
                       {({
                         field,
@@ -195,12 +195,13 @@ const ContactForm: React.FC<ModalType> = ({
                             (option) => option.value === field.value
                           )} // Set the value prop to the selected option
                           placeholder="Select Industry..."
+                          className="h-10 md:h-16"
                           styles={{
                             control: (provided) => ({
                               ...provided,
                               border: "1px solid #ccc",
                               borderRadius: "4px",
-                              height: "60px",
+                              // height: "60px",
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({
@@ -231,7 +232,7 @@ const ContactForm: React.FC<ModalType> = ({
                       placeholder="Enter your lastName"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-4 px-4 rounded-md bg-gray-100 border border-gray-300 focus:outline-none focus:border-blue-500"
+                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs placeholder:font-thin"
                       )}
                     />
                     <ErrorMessage
@@ -244,7 +245,7 @@ const ContactForm: React.FC<ModalType> = ({
                     />
                   </div>
                   <div className={cx(carterOne.className)}>
-                    <label htmlFor="country">Select a Country:</label>
+                    <label htmlFor="country">Country:</label>
                     <Field name="country">
                       {({
                         field,
@@ -267,12 +268,13 @@ const ContactForm: React.FC<ModalType> = ({
                             (option) => option.value === field.value
                           )} // Set the value prop to the selected option
                           placeholder="Select Country..."
+                          className="h-10 md:h-16"
                           styles={{
                             control: (provided) => ({
                               ...provided,
                               border: "1px solid #ccc",
                               borderRadius: "4px",
-                              height: "60px",
+                              // height: "60px",
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({
@@ -294,9 +296,7 @@ const ContactForm: React.FC<ModalType> = ({
                   </div>
                   {/*  */}
                   <div className={cx(carterOne.className)}>
-                    <label htmlFor="specialization">
-                      Select a Specialization:
-                    </label>
+                    <label htmlFor="specialization">Specialization:</label>
                     <Field name="specialization">
                       {({
                         field,
@@ -322,12 +322,13 @@ const ContactForm: React.FC<ModalType> = ({
                             (option) => option.value === field.value
                           )} // Set the value prop to the selected option
                           placeholder="Select Specialization..."
+                          className="h-10 md:h-16"
                           styles={{
                             control: (provided) => ({
                               ...provided,
                               border: "1px solid #ccc",
                               borderRadius: "4px",
-                              height: "60px",
+                              // height: "60px",
                               width: "100%", // Customize width as needed
                             }),
                             option: (provided, state) => ({
@@ -352,7 +353,7 @@ const ContactForm: React.FC<ModalType> = ({
               <div className="w-full text-center">
                 <button
                   type="submit"
-                  className="bg-black py-4 px-20 text-white rounded-[20px] border border-[#BBBBBB] font-medium text-[18px] disabled:bg-slate-600 disabled:cursor-not-allowed"
+                  className="bg-black py-2 md:py-4 px-10 md:px-20 text-white rounded-[20px] border border-[#BBBBBB] font-medium text-xs md:text-[18px] disabled:bg-slate-600 disabled:cursor-not-allowed"
                   disabled={
                     ![
                       values.country,
