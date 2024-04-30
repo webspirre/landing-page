@@ -43,9 +43,9 @@ const HeroSection: React.FC<HeroSectionType> = ({ bgImg, videoToggle }) => {
               data-aos="zoom-in-up"
             >
               <h1
-                className={`${carterOne.className} text-5xl text-center font-black leading-tight`}
+                className={`${carterOne.className} text-[32px] sm:text-5xl text-center font-black leading-tight`}
               >
-                Finding web design inspiration doesn’t have to be{" "}
+                Finding web design inspiration doesn’t have  to be{" "}
                 <span
                   style={{
                     backgroundImage: `url(${backgroundImageUrl1})`,
@@ -59,7 +59,7 @@ const HeroSection: React.FC<HeroSectionType> = ({ bgImg, videoToggle }) => {
                   Hard.
                 </span>
               </h1>
-              <h1 className="text-2xl font-medium text-center pt-4">
+              <h1 className="px-4 sm:text-2xl text-[16px] font-medium text-center pt-4">
                 We are building the ultimate web design inspiration platform.
                 Join the waitlist, and be the first person to know when we
                 launch.
@@ -69,12 +69,12 @@ const HeroSection: React.FC<HeroSectionType> = ({ bgImg, videoToggle }) => {
             <div className="flex items-center justify-center gap-4 pt-6">
               <Link
                 href="#contact-section"
-                className="bg-black py-4 px-8 text-white rounded-[20px] border border-[#BBBBBB] font-medium text-[18px]"
+                className="bg-black px-4 py-2 sm:py-4 sm:px-8 text-white rounded-lg sm:rounded-[20px] border border-[#BBBBBB] font-medium text-[14px] sm:text-[18px]"
               >
                 Join the waitlist
               </Link>
               <div
-                className="bg-white p-4 px-8 text-black rounded-[20px] border border-[#BBBBBB] font-medium text-[18px] flex items-center space-x-3 cursor-pointer"
+                className="bg-white  sm:p-4 sm:px-8 px-4 py-2 text-black rounded-lg sm:rounded-[20px] border border-[#BBBBBB] font-medium text-[14px] sm:text-[18px] flex items-center space-x-3 cursor-pointer"
                 onClick={videoToggle}
               >
                 <GiPlayButton size={20} />
