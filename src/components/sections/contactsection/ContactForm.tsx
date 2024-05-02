@@ -141,7 +141,7 @@ const ContactForm: React.FC<ModalType> = ({
                       placeholder="Enter your firstName"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500 placeholder:text-xs md:text-xl"
+                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500 placeholder:text-xs md:text-xl md:placeholder:text-xl"
                       )}
                     />
 
@@ -161,7 +161,7 @@ const ContactForm: React.FC<ModalType> = ({
                       name="email"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs"
+                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl"
                       )}
                     />
                     <ErrorMessage
@@ -232,7 +232,7 @@ const ContactForm: React.FC<ModalType> = ({
                       placeholder="Enter your lastName"
                       className={cx(
                         carterOne.className,
-                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs placeholder:font-thin"
+                        "block w-full py-2 md:py-4 px-4 rounded-md  border border-gray-300 focus:outline-none focus:border-blue-500  placeholder:text-xs md:placeholder:text-xl placeholder:font-thin"
                       )}
                     />
                     <ErrorMessage

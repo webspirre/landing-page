@@ -49,7 +49,8 @@ const ContactSection: React.FC<ModalType> = ({
                 className="px-4"
               >
                 Don't
-              </span>{" "}
+              </span>
+              {""}
               miss out
             </h1>
             <p

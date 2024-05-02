@@ -74,7 +74,10 @@ export default function Home() {
           <Footer />
         </main>
       </ErrorBoundary>
-      <ScrollToTop smooth className="flex justify-center items-center " />
+      <ScrollToTop
+        smooth
+        className="flex justify-center items-center z-[999]"
+      />
     </>
   );
 }
