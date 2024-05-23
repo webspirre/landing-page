@@ -25,7 +25,7 @@ function Section3() {
   return (
     <div className="">
       <section className="relative h-[598px]">
-        <div className="relative h-full items-center bg-black grid grid-cols-8 gap-4 pl-[200px]">
+        <div className="relative h-full items-center bg-black grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pl-4 md:pl-0">
           <div
             className="col-span-5 pr-[200px] relative z-10"
             data-aos="fade-up-left"
