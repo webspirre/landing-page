@@ -33,10 +33,10 @@ const ContactSection: React.FC<ModalType> = ({
         }}
         className="justify-center w-full flex-row h- items-center space-y-4 py-20"
       >
-        <section className="p-20 w-full">
-          <div className="text-center mx-auto max-w-3xl">
+        <section className="p-0 md:p-20 w-full">
+          <div className="text-center mx-auto max-w-full md:max-w-3xl">
             <h1
-              className={`${carterOne.className} text-5xl text-center font-black leading-tight`}
+              className={`${carterOne.className} text-xl md:text-5xl text-center font-black leading-tight`}
             >
               <span
                 style={{
@@ -49,15 +49,21 @@ const ContactSection: React.FC<ModalType> = ({
                 className="px-4"
               >
                 Don't
-              </span>{" "}
+              </span>
+              {""}
               miss out
             </h1>
-            <p className={cx(carterOne.className, "text-xl mt-8")}>
+            <p
+              className={cx(
+                carterOne.className,
+                "text-xs md:text-xl mt-4 md:mt-8"
+              )}
+            >
                Enter your email address below to be among the first to access
               Webspirre and unlock a universe of web design inspiration.
             </p>
           </div>
-          <div className=" mt-10 mx-auto w-full">
+          <div className="mt-4 md:mt-10 mx-0 md:mx-auto w-full">
             <ContactForm
               toogleModal={toogleModal}
               open={open}
